@@ -4,12 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Exo n1
+
 bool is_even(int nb)
 {
     if (nb % 2 == 0)
         return (true);
     return (false);
 }
+
+// Exo n2
 
 bool are_you_here(char *arr1, char *arr2)
 {
@@ -27,6 +31,8 @@ bool are_you_here(char *arr1, char *arr2)
     return (false);
 }
 
+// Exo n3
+
 int naive_search(char *arr, char item)
 {
     for (size_t i = 0; i < strlen(arr); i++)
@@ -35,12 +41,16 @@ int naive_search(char *arr, char item)
     return (-1);
 }
 
+// Exo n4
+
 void create_pairs(char *arr)
 {
     for (size_t i = 0; i < strlen(arr); i++)
         for (size_t j = i + 1; j < strlen(arr); j++)
             printf("%c, %c\n", arr[i], arr[j]);
 }
+
+// Exo n5
 
 int *generate_fib(int num) {
     int arr[30];
@@ -52,6 +62,8 @@ int *generate_fib(int num) {
     }
     return (arr);
 }
+
+// Exo n6
 
 int efficient_search(int *arr, int item, int arr_size)
 {
@@ -72,12 +84,16 @@ int efficient_search(int *arr, int item, int arr_size)
     return (-1);
 }
 
+// Exo n7
+
 int find_random_element(int *arr, int arr_size)
 {
     time_t t;
     srand((unsigned) time(&t));
     return (arr[(rand() % arr_size)]);
 }
+
+// Exo n8
 
 bool is_prime(int nb)
 {
@@ -89,9 +105,52 @@ bool is_prime(int nb)
     return (true);
 }
 
-int main (void)
+// Exo n9
+
+void insertionSort(int arr[], int n)
 {
-    int test[] = {2, 1, 3, 2, 4, 5, 0, 8, 2, 3, 5};
-    printf("%d\n", efficient_search(test, 2, 11));
-    return (0);
+    int value;
+    int j;
+
+	for (int i = 1; i < n; i++) 
+	{
+		value = arr[i];
+		j = i;
+		
+		while (j > 0 && arr[j - 1] > value) 
+		{
+			arr[j] = arr[j - 1];
+			j--;
+		}
+		arr[j] = value;
+	}
+}
+
+// Exo n10
+
+int fibbonacci(int n)
+{
+   if(n == 0){
+      return 0;
+   } else if(n == 1) {
+      return 1;
+   } else {
+      return (fibbonacci(n-1) + fibbonacci(n-2));
+   }
+}
+
+void call_fib(int nb) 
+{
+    for (int i = 0; i < nb; i++) {
+        fibbonacci(i);
+    }
+}
+
+// Exo n11
+
+int get_elem(int *arr, int index)
+{
+    if (arr[index])
+        return (arr[index]);
+    return (NULL);
 }
