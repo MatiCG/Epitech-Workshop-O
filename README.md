@@ -167,3 +167,36 @@ int search_item(char *arr, char item)
 and return the index of the item in the array, if not it must return -1.
 The least optimize case would be O(n) and the most optimized case would be O(log(n)).
 Optimize the complexity of you algorithm as close as you can to the most optimized case.
+
+## Exo 12
+
+You have two different ways to do the calculation of fibonacci numbers:
+
+```c
+int fibonacci(int num)
+{
+    if (num <= 1) return num;
+    return fibonacci(num - 2) + fibonacci(num - 1);
+}
+```
+
+O(2pow(n))
+
+```c
+int fibonacci(int n) {
+  int first = 0, second = 1;
+
+  int tmp;
+  while (n--) {
+    tmp = first+second;
+    first = second;
+    second = tmp;
+  }
+  return first;
+}
+```
+
+O(n)
+
+For this exercise you will have to tell which one is the most efficient for a small number
+and which one is the most efficient for a large number.
