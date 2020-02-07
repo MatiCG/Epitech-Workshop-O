@@ -3,6 +3,8 @@ Repository containing exercises for the Big O workshop at Epitech Paris
 You will be guided through the first four exercises, the rest is up to you.
 Don't hesitate to ask for help though !
 
+for the exercises 1 to 10 yo will have to determine the algorithm complexity of the following functions
+
 ## Ex 1
 
 ```c
@@ -75,29 +77,6 @@ int *generate_fib(int num) {
 ## Ex 6
 
 ```c
-int efficient_search(int *arr, int item, int arr_size)
-{
-    int min_index = 0;
-    int max_index = arr_size - 1;
-    int current_index;
-    float current_elem;
-    while (min_index <= max_index) {
-        current_index = floor((min_index + max_index) / 2);
-        current_elem = arr[current_index];
-        if (current_elem < item)
-            min_index = current_index + 1;
-        else if (current_elem > item)
-            min_index = current_index - 1;
-        else
-            return (current_index);
-    }
-    return (-1);
-}
-```
-
-## Ex 7
-
-```c
 int find_random_element(int *arr, int arr_size)
 {
     time_t t;
@@ -106,7 +85,7 @@ int find_random_element(int *arr, int arr_size)
 }
 ```
 
-## Ex 8
+## Ex 7
 
 ```c
 bool is_prime(int nb)
@@ -120,7 +99,7 @@ bool is_prime(int nb)
 }
 ```
 
-## Ex 9
+## Ex 8
 
 ```c
 void insertionSort(int arr[], int n)
@@ -141,7 +120,7 @@ void insertionSort(int arr[], int n)
 }
 ```
 
-## Ex 10
+## Ex 9
 
 ```c
 int fibbonacci(int n)
@@ -163,7 +142,7 @@ void call_fib(int nb)
 }
 ```
 
-## Ex 11
+## Ex 10
 
 ```c
 int get_elem(int *arr, int index)
@@ -174,4 +153,17 @@ int get_elem(int *arr, int index)
 }
 ```
 
-## Exo 12
+## Exo 11
+
+It's time for you to create your own algorithm.
+You must create and optimize your own search algorithm.
+
+the function must be prototyped as:
+
+```c
+int search_item(char *arr, char item)
+```
+
+and return the index of the item in the array, if not it must return -1.
+The least optimize case would be O(n) and the most optimized case would be O(log(n)).
+Optimize the complexity of you algorithm as close as you can to the most optimized case.
