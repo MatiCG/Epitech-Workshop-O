@@ -7,6 +7,8 @@ for the exercises 1 to 10 yo will have to determine the algorithm complexity of 
 
 ## Ex 1
 
+Here we can see that it only accesses one variable. Therefore its runtime is constant. That means that its compelxity is ?
+
 ```c
 bool is_even(int nb)
 {
@@ -17,6 +19,9 @@ bool is_even(int nb)
 ```
 
 ## Ex 2
+
+In this exercice we can see that it runs through an array once. This means that with each addition to the array it will take a bit more time.
+While the best case scenario is O(1) here, the worst case scenario is?
 
 ```c
 int naive_search(char *arr, char item)
@@ -29,6 +34,8 @@ int naive_search(char *arr, char item)
 ```
 
 ## Ex 3
+
+This time we have iteration through two arrays ! For each element in array 1 we iterate over all array 2.
 
 ```c
 bool are_you_here(char *arr1, char *arr2)
